@@ -1,0 +1,45 @@
+[
+  {
+    "pergunta": "Quantos litros de gasolina um salário mínimo comprava em 2021?",
+    "doc_esperado": "ano-2021"
+  },
+  {
+    "pergunta": "Quantos Big Macs dava para comprar com o mínimo em 2005?",
+    "doc_esperado": "ano-2005"
+  },
+  {
+    "pergunta": "Qual era o poder de compra do salário mínimo em 2016?",
+    "doc_esperado": "ano-2016"
+  },
+  {
+    "pergunta": "Qual lei criou a política de valorização do salário mínimo?",
+    "doc_esperado": "politica_de_valorizacao"
+  },
+  {
+    "pergunta": "Qual norma fixou o salário mínimo de R$ 1.320?",
+    "doc_esperado": "norma-2023-05"
+  },
+  {
+    "pergunta": "Qual decreto definiu o salário mínimo de 2026?",
+    "doc_esperado": "norma-2026-01"
+  },
+  {
+    "pergunta": "A média de gasolina é ponderada pelas vendas?",
+    "doc_esperado": "fontes_e_metodologia"
+  },
+  {
+    "pergunta": "Os valores são corrigidos pela inflação?",
+    "doc_esperado": "fontes_e_metodologia"
+  },
+  {
+    "pergunta": "Big Macs por salário mínimo em 2024",
+    "doc_esperado": "ano-2024"
+  },
+  {
+    "pergunta": "Reajuste do salário mínimo de 2012",
+    "doc_esperado": [
+      "norma-2012-01",
+      "ano-2012"
+    ]
+  }
+]

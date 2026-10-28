@@ -1,0 +1,28 @@
+# Sobe no ZimaOS (ou em qualquer máquina com Docker): Ollama + warehouse + servidor MCP.
+services:
+  ollama:
+    image: ollama/ollama:latest
+    volumes: [ollama:/root/.ollama]
+    ports: ["11434:11434"]
+    restart: unless-stopped
+
+  ollama-pull:
+    image: ollama/ollama:latest
+    depends_on: [ollama]
+    environment: [OLLAMA_HOST=ollama:11434]
+    entrypoint: ["sh", "-c", "sleep 5 && ollama pull nomic-embed-text && ollama pull qwen2.5:7b"]
+    restart: "no"
+
+  qcm:
+    build: .
+    depends_on: [ollama]
+    environment:
+      OLLAMA_URL: http://ollama:11434
+      QCM_CHAT_MODEL: qwen2.5:7b
+    volumes: [qcm-data:/data]
+    ports: ["8000:8000"]
+    restart: unless-stopped
+
+volumes:
+  ollama:
+  qcm-data:

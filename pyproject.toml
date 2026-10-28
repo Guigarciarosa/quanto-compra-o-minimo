@@ -1,0 +1,23 @@
+[project]
+name = "quanto-compra-o-minimo"
+version = "0.1.0"
+description = "RAG + Text-to-SQL local (Ollama + DuckDB) sobre o poder de compra do salário mínimo no Brasil"
+requires-python = ">=3.10"
+dependencies = ["duckdb>=1.1", "numpy>=1.26", "requests>=2.31", "mcp>=2.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+qcm = "qcm.__main__:main"
+qcm-mcp = "qcm.mcp_server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
